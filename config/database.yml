@@ -12,10 +12,10 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  #username: 
+  #password:
+  #socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: viva-admin_production
-  username: viva-admin
-  password: <%= ENV['VIVA-ADMIN_DATABASE_PASSWORD'] %>
+  host: <%= ENV['DBHOST'] %>
+  database: <%= ENV['DBNAME'] %>
+  username: <%= ENV['DBUSER'] %>
+  password: <%= ENV['DBPASSWD'] %>
