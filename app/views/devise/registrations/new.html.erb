@@ -9,9 +9,46 @@
     </div>
 
     <div>
-      <%= f.label :Orgnization %><br />
-      <%= f.text_field :Org, autofocus: true %>
-      <em>(Orgnization ID 1 to 37)</em>
+      <%= f.label :Institution %><br />
+      <%= f.select :Org, options_for_select([["Select One", ""],
+                                             ["Alexandria Library",1],
+                                             ["Bridgewater College",2],
+                                             ["College of William and Mary",3],
+                                             ["Colonial Williamsburg",4],
+                                             ["Fairfax County Public Library",5],
+                                             ["George Mason University",6],
+                                             ["Gunston Hall Library & Archives",7],
+                                             ["Handley Regional Library",8],
+                                             ["Hollins University",9],
+                                             ["James Madison University",10],
+                                             ["Library of Virgina",11],
+                                             ["Longwood University",12],
+                                             ["Montgomery County Circuit Court",13],
+                                             ["Old Dominion University",14],
+                                             ["Roanoke Public Libraries",15],
+                                             ["Radford University",16],
+                                             ["Randolph-Macon College",17],
+                                             ["Shenandoah County Library",18],
+                                             ["Thomas Balch Library",19],
+                                             ["University of Mary Washington",20],
+                                             ["University of Richmond",21],
+                                             ["University of Virginia, Health Sciences Library",22],
+                                             ["University of Virginia, Law Library",23],
+                                             ["University of Virginia, Music Library",24],
+                                             ["University of Virginia, Special Collections",25],
+                                             ["Virginia Commonwealth University, James Cabell Library",26],
+                                             ["Virginia Commonwealth University, Tompkins-McCaw Library",27],
+                                             ["Virginia Historical Society",28],
+                                             ["Virginia Military Institute",29],
+                                             ["Virginia Museum of Fine Arts",30],
+                                             ["Virginia Polytechnic Institute and State University",31],
+                                             ["Virginia State Law Library, Supreme Court of Virginia",32],
+                                             ["Virginia State University",33],
+                                             ["Virginia Union University",34],
+                                             ["Washington and Lee University, Law School",35],
+                                             ["Washington and Lee University, Leyburn Library",36],
+                                             ["Wytheville Community College",37]
+                                            ]), :class =>'dropbox' %>
     </div>
 
     <div class="field">
