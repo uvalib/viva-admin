@@ -1,5 +1,83 @@
-<p id="notice"><%= notice %></p>
+<div class="wrapper">
+  <div class="title">
+    <h1>Virginia Heritage Dashboard</h1>
+    Visits in <span id = "msg"></span><h2 id="institution_name"></h2>
+  </div>
+  <!-- <div class="message"><h3> Visits for last month</h3><button onclick="showSelection()">Change</button></div> -->
+  <div id="selectionDIV" class="selection">
+    <div class="timeSelect">
+      <h5>Period</h5>
+      <select id="period">
+        <option value="day">Day</option>
+        <option value="week" style="display:none;">Week</option>
+        <option value="month" selected>Month</option>
+        <option value="year">Year</option>
+        <option value="range">Date Range</option>
+      </select>
+    </div>
+    <div class="dateSelectFrom" id="dateSelectFrom">
+      <h5>Starting From</h5>
+      <input type="date" id="date" value="">
+    </div>
+    <div class="dateSelectEnd" id="dateSelectEnd">
+      <h5>To</h5>
+      <input type="date" id="endDate" value="">
+    </div>
+    <div class="institutionSelect">
+      <input id="ins" type="hidden" value="<%= @vivas.institution%>" />
+    </div>
+    <div>
+      <h5 class="hidden">Go</h5>
+      <button type="button" id="go">Go</button>
+    </div>
+  </div>
+  <div class="showThree">
+    <div class="timeSpent">
+      <h3>Time Spent on Site</h3>
+      <p><span id="time">Loading...</span></p>
+    </div>
+    <div class="numOfVisitors">
+      <h3>Number of Unique Visitors</h3>
+      <p><span id="visitors">Loading...</span></p>
+    </div>
+    <div class="returningVisit">
+      <h3>Number of Returning Visitors</h3>
+      <!--    <span class="tooltiptext">Total number of unique visitors having visited</span> -->
+      <p><span id="return">Loading...</span></p>
+    </div>
+  </div>
+  <div class="showTwo">
+    <div id="locOfVisitors" class="locOfVisitors">
+    </div>
+    <div class="commonReferrers">
+      <h3>Most common referrers</h3>
+      <table name="ref_tab" id="ref_tab">
+        <tr>
+          <th>Referrer</th>
+          <th>Visits</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="popularFinding">
+    <h3>Most Popular Finding Aids</h3>
+    <p><span id="popular" style="overflow: scroll; width: 85%; height: 500px;">
+         <table name="fa_tab" id="fa_tab" >
+             <tr>
+                 <th>Finding Aid</th>
+                 <th>Visits</th>
+             </tr>
+         </table>
+         </span></p>
+  </div>
 
-<h1>Virginia Heritage Dashboard - <%= @vivas.institution %></h1>
+  <!--
+    <div class="searchTerm">
+        <h3>Top Search Term</h3>
+        <p><span id="top_term">Loading...</span></p>
+    </div>
+    -->
+
+</div>
 
 

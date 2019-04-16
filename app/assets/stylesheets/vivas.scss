@@ -1,3 +1,144 @@
 // Place all the styles related to the vivas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* main.css */
+
+
+.title {
+  width:86%;
+  padding:20px;
+}
+
+.selection {
+  width:86%;
+  /*   display:none; */
+  padding:20px;
+}
+
+.timeSelect {
+  float:left;
+  width: 15%;
+}
+
+.dateSelectFrom {
+  float:left;
+  width: 15%;
+}
+
+.dateSelectEnd {
+  float:left;
+  width: 15%;
+}
+
+.institutionSelect {
+  float:left;
+  width: 45%;
+}
+
+h5.hidden {
+  visibility: hidden;
+}
+
+.go {
+  float:right;
+  width: 6%;
+}
+
+.showThree{
+  width:86%;
+  padding:20px;
+  /* background: #888; */
+  background: #002F6C;
+}
+
+.timeSpent {
+  width: 27%;
+  float:left;
+  padding: 20px;
+
+}
+
+.numOfVisitors {
+  width: 27%;
+  float:left;
+  padding: 20px;
+
+}
+
+.returningVisit {
+  width: 28%;
+  float:left;
+  padding: 20px;
+
+  position: relative;
+  display: inline-block;
+  /*border-bottom: 1px dotted black; */
+
+}
+
+.showTwo{
+  width:86%;
+  padding:20px;
+  /* background: #888; */
+  background: #002F6C;
+}
+
+.locOfVisitors{
+  background-color:white;
+  width: 65%;
+  padding: 20px;
+  padding-bottom: 10px;
+  float:left;
+}
+
+.commonReferrers {
+  width: 21%;
+  /*    padding: 10px;
+      padding-bottom: 85px;
+      margin-right: 46px; */
+  padding:36px;
+  float:right;
+}
+
+.popularFinding {
+  width: 86%;
+  padding: 20px;
+  height: 400px;
+  overflow: auto;
+}
+
+.returningVisit .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: whitesmoke;
+  color: #002F6C;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.returningVisit:hover .tooltiptext {
+  visibility: visible;
+}
+
+.searchTerm {
+
+}
+
+
+td{
+  text-align: left;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color:lightblue;
+}
