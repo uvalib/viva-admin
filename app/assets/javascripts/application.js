@@ -349,45 +349,46 @@ $(function() {
 
 $(document).ready(function(){
     //Add loading overlay with customized text message when API call sent
-    $(document).ajaxStart(function() {
-        //   ins = institution_fullname($('#ins').val());
-        msg = "Loading data from " + get_message($('#period').val(), $('#date').val(),$('#endDate').val());
-        $.LoadingOverlay("show", {
-            image   : "",
-            text    : msg,
-            textResizeFactor    : 0.2
+    if ($('#user_signed_in').val() == 'true') {
+        $(document).ajaxStart(function () {
+            //   ins = institution_fullname($('#ins').val());
+            msg = "Loading data from " + get_message($('#period').val(), $('#date').val(), $('#endDate').val());
+            $.LoadingOverlay("show", {
+                image: "",
+                text: msg,
+                textResizeFactor: 0.2
+            });
         });
-    });
-    //Hide loading overlay when API call finishes
-    $(document).ajaxStop(function() {
-        $.LoadingOverlay("hide");
-    });
+        //Hide loading overlay when API call finishes
+        $(document).ajaxStop(function () {
+            $.LoadingOverlay("hide");
+        });
 
-    //Initialization of the page, display data of last month
-    institution_fullname($('#ins').val());
-    $('#date').val(first_day_last_month);
-    $('#msg').html(get_message($('#period').val(), $('#date').val(),$('#endDate').val()));
-    unique_visitors($('#period').val(), first_day_last_month,$('#endDate').val(),$('#ins').val());
-    common_referrers($('#period').val(), first_day_last_month,$('#endDate').val(),$('#ins').val());
-    locations_graph($('#period').val(), first_day_last_month,$('#endDate').val(),$('#ins').val());
-    time_spent($('#period').val(), first_day_last_month,$('#endDate').val(),$('#ins').val());
-    returning_visit($('#period').val(), first_day_last_month,$('#endDate').val(),$('#ins').val());
-    top_search_term($('#period').val(), first_day_last_month,$('#endDate').val(),$('#ins').val());
-    popular_finding_aids($('#period').val(), first_day_last_month,$('#endDate').val(),$('#ins').val());
-
-    //Page load when go button is clicked
-    $('#go').click(function() {
-        console.log('period: ', $('#period').val());
-        console.log('End date: ', $('#endDate').val());
+        //Initialization of the page, display data of last month
         institution_fullname($('#ins').val());
-        $('#msg').html(get_message($('#period').val(), $('#date').val(),$('#endDate').val()));
-        unique_visitors($('#period').val(), $('#date').val(),$('#endDate').val(),$('#ins').val());
-        common_referrers($('#period').val(), $('#date').val(),$('#endDate').val(),$('#ins').val());
-        locations_graph($('#period').val(), $('#date').val(),$('#endDate').val(),$('#ins').val());
-        time_spent($('#period').val(), $('#date').val(),$('#endDate').val(),$('#ins').val());
-        returning_visit($('#period').val(), $('#date').val(),$('#endDate').val(),$('#ins').val());
-        top_search_term($('#period').val(), $('#date').val(),$('#endDate').val(),$('#ins').val());
-        popular_finding_aids($('#period').val(), $('#date').val(),$('#endDate').val(),$('#ins').val());
-    })
+        $('#date').val(first_day_last_month);
+        $('#msg').html(get_message($('#period').val(), $('#date').val(), $('#endDate').val()));
+        unique_visitors($('#period').val(), first_day_last_month, $('#endDate').val(), $('#ins').val());
+        common_referrers($('#period').val(), first_day_last_month, $('#endDate').val(), $('#ins').val());
+        locations_graph($('#period').val(), first_day_last_month, $('#endDate').val(), $('#ins').val());
+        time_spent($('#period').val(), first_day_last_month, $('#endDate').val(), $('#ins').val());
+        returning_visit($('#period').val(), first_day_last_month, $('#endDate').val(), $('#ins').val());
+        top_search_term($('#period').val(), first_day_last_month, $('#endDate').val(), $('#ins').val());
+        popular_finding_aids($('#period').val(), first_day_last_month, $('#endDate').val(), $('#ins').val());
 
+        //Page load when go button is clicked
+        $('#go').click(function () {
+            console.log('period: ', $('#period').val());
+            console.log('End date: ', $('#endDate').val());
+            institution_fullname($('#ins').val());
+            $('#msg').html(get_message($('#period').val(), $('#date').val(), $('#endDate').val()));
+            unique_visitors($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
+            common_referrers($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
+            locations_graph($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
+            time_spent($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
+            returning_visit($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
+            top_search_term($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
+            popular_finding_aids($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
+        })
+    }
 })
