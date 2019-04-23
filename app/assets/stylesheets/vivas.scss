@@ -2,39 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* main.css */
 
+body {
+     font-family: Tahoma, Lucida, Calibri;
+     font-size: 16px;
+     color: #EEE;
+      background: whitesmoke;
+}
 
 .title {
   width:86%;
-  padding:20px;
+ // padding:20px;
+  color:white;
 }
 
 .selection {
-  width:86%;
-  /*   display:none; */
-  padding:20px;
+  width:89.5%;
+  padding:5px;
+  color:white;
 }
 
 .timeSelect {
   float:left;
-  width: 15%;
+  width: 20%;
+  color:white;
 }
 
 .dateSelectFrom {
   float:left;
-  width: 15%;
+  width: 20%;
+  color:white;
 }
 
 .dateSelectEnd {
   float:left;
-  width: 15%;
+  width: 20%;
+  color:white;
 }
 
-.institutionSelect {
-  float:left;
-  width: 45%;
-}
 
 h5.hidden {
   visibility: hidden;
@@ -42,20 +47,22 @@ h5.hidden {
 
 .go {
   float:right;
-  width: 6%;
+  width: 15%;
 }
 
 .showThree{
-  width:86%;
+  width:89.5%;
   padding:20px;
   /* background: #888; */
   background: #002F6C;
+  color:white;
 }
 
 .timeSpent {
   width: 27%;
   float:left;
   padding: 20px;
+  color:white;
 
 }
 
@@ -63,14 +70,14 @@ h5.hidden {
   width: 27%;
   float:left;
   padding: 20px;
-
+  color:white;
 }
 
 .returningVisit {
   width: 28%;
   float:left;
   padding: 20px;
-
+  color:white;
   position: relative;
   display: inline-block;
   /*border-bottom: 1px dotted black; */
@@ -78,7 +85,7 @@ h5.hidden {
 }
 
 .showTwo{
-  width:86%;
+  width:89.5%;
   padding:20px;
   /* background: #888; */
   background: #002F6C;
@@ -99,13 +106,15 @@ h5.hidden {
       margin-right: 46px; */
   padding:36px;
   float:right;
+  color:white;
 }
 
 .popularFinding {
-  width: 86%;
+  width: 89.5%;
   padding: 20px;
   height: 400px;
   overflow: auto;
+  color:white;
 }
 
 .returningVisit .tooltiptext {
@@ -133,6 +142,7 @@ h5.hidden {
 
 td{
   text-align: left;
+  color:white;
 }
 
 a:link {
