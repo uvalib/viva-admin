@@ -44,6 +44,9 @@ function institution_fullname(institution){
     if (institution === "apl") {
         fullname ="Alexandria Library";
     }
+    if (institution === "au") {
+        fullname ="Averett University";
+    }
     if (institution === "bc") {
         fullname ="Bridgewater College";
     }
@@ -80,8 +83,14 @@ function institution_fullname(institution){
     if (institution === "mcc") {
         fullname ="Montgomery County Circuit Court";
     }
+    if (institution === "npl") {
+        fullname ="Norfolk Public Library";
+    }
     if (institution === "odu") {
         fullname ="Old Dominion University";
+    }
+    if (institution === "rc") {
+        fullname ="Roanoke College";
     }
     if (institution === "rpl") {
         fullname ="Roanoke Public Libraries";
@@ -103,6 +112,9 @@ function institution_fullname(institution){
     }
     if (institution === "ur") {
         fullname ="University of Richmond";
+    }
+    if (institution === "uva-cnhi") {
+        fullname ="University of Virginia, The Center for Nursing Historical Inquiry";
     }
     if (institution === "uva-hs") {
         fullname ="University of Virginia, Health Sciences Library";
@@ -149,8 +161,14 @@ function institution_fullname(institution){
     if (institution === "wl-ley") {
         fullname ="Washington and Lee University, Leyburn Library";
     }
+    if (institution === "wwplm") {
+        fullname ="Woodrow Wilson Presidential Library &amp; Museum";
+    }
     if (institution === "wcc") {
         fullname ="Wytheville Community College";
+    }
+    if (institution === "wchs") {
+        fullname ="Wythe County Historical Society";
     }
     $('#institution_name').html(fullname);
     return fullname;
