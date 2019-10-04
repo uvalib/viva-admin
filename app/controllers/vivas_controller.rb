@@ -5,7 +5,7 @@ class VivasController < ApplicationController
   # GET /vivas.json
   def index
    # @vivas = Viva.all
-    @vivas = Viva.find_by(id: current_user.Org)
+    @vivas = Viva.find_by(id: @org)
   end
 
   # GET /vivas/1
