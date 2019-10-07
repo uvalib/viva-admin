@@ -367,7 +367,7 @@ $(function() {
 
 $(document).ready(function(){
     //Add loading overlay with customized text message when API call sent
-    if ($('#user_signed_in').val() == 'true') {
+   // if ($('#user_signed_in').val() == 'true') {
         $(document).ajaxStart(function () {
             //   ins = institution_fullname($('#ins').val());
             msg = "Loading data from " + get_message($('#period').val(), $('#date').val(), $('#endDate').val());
@@ -408,5 +408,5 @@ $(document).ready(function(){
             top_search_term($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
             popular_finding_aids($('#period').val(), $('#date').val(), $('#endDate').val(), $('#ins').val());
         })
-    }
+   // }
 })
