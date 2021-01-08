@@ -18,7 +18,7 @@ INSTANCE=viva-admin
 NAMESPACE=uvadave
 
 # build the image
-$DOCKER_TOOL build -t $NAMESPACE/$INSTANCE .
+$DOCKER_TOOL build -f package/Dockerfile -t $NAMESPACE/$INSTANCE .
 
 # return status
 exit $?
