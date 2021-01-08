@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.9
 
 # Add necessary packages
 RUN apk --update add bash tzdata ruby ruby-dev build-base nodejs sqlite-dev mariadb-dev zlib-dev libxml2-dev libxslt-dev libffi-dev ca-certificates
@@ -18,12 +18,14 @@ ENV APP_HOME /viva-admin
 WORKDIR $APP_HOME
 
 # Copy the Gemfile into the image and install the gems
-ADD Gemfile ./
+ADD Gemfile Gemfile.lock ./
 RUN bundle install --jobs=4 --without=["development" "test"] --no-cache
 
-# install the app and bundle
+# install the app
 COPY . $APP_HOME
-RUN rake assets:precompile
+
+# create the precompiled assets
+RUN RAILS_ENV=production SECRET_KEY_BASE=x rake assets:precompile
 
 # Update permissions
 RUN chown -R docker $APP_HOME && chgrp -R sse $APP_HOME
@@ -37,3 +39,7 @@ CMD scripts/entry.sh
 
 # move in the profile
 COPY data/container_bash_profile /home/docker/.profile
+
+#
+# end of file
+#
