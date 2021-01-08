@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.12
 
 # Add necessary packages
 RUN apk --update add bash tzdata ruby ruby-dev build-base nodejs sqlite-dev mariadb-dev zlib-dev libxml2-dev libxslt-dev libffi-dev ca-certificates
@@ -11,14 +11,14 @@ ENV TZ=UTC
 RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Add necessary gems
-RUN gem install bundler -v 1.17.3 --no-ri --no-rdoc && gem install io-console --no-ri --no-rdoc
+RUN gem install bundler -v 1.17.3 --no-document && gem install io-console --no-document
 
 # Specify home 
 ENV APP_HOME /viva-admin
 WORKDIR $APP_HOME
 
 # Copy the Gemfile into the image and install the gems
-ADD Gemfile Gemfile.lock ./
+ADD Gemfile ./
 RUN bundle install --jobs=4 --without=["development" "test"] --no-cache
 
 # install the app and bundle
