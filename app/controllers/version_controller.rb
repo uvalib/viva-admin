@@ -1,7 +1,7 @@
 class VersionController < ApplicationController
 
   #skip_before_filter :require_auth
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, raise: false
 
   # the response
   class VersionResponse

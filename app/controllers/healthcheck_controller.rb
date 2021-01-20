@@ -1,5 +1,5 @@
 class HealthcheckController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, raise: false
 
 def index
   response = 'OK'.to_json

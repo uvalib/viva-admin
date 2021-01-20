@@ -3,7 +3,7 @@ rm -f $APP_HOME/tmp/pids/server.pid > /dev/null 2>&1
 
 # run database migration
 rake db:migrate
-rails db:seed
+bundle exec rails db:seed
 
 # run the server
-rails server -b 0.0.0.0 -p 3000
+bundle exec rails server -b 0.0.0.0 -p 8080

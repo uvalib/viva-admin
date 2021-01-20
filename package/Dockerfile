@@ -1,7 +1,8 @@
-FROM alpine:3.9
+#FROM alpine:3.13
+FROM ruby:2.7.1-alpine3.12
 
 # Add necessary packages
-RUN apk --update add bash tzdata ruby ruby-dev build-base nodejs sqlite-dev mariadb-dev zlib-dev libxml2-dev libxslt-dev libffi-dev ca-certificates
+RUN apk --update add bash tzdata build-base nodejs sqlite-dev mariadb-dev zlib-dev libxml2-dev libxslt-dev libffi-dev ca-certificates
 
 # Create the run user and group
 RUN addgroup --gid 18570 sse && adduser --uid 1984 docker -G sse -D

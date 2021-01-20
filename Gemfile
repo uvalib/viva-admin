@@ -65,6 +65,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # for alpine Linux
-gem 'etc', '~> 1.0.1'
 gem 'json'
 gem 'bigdecimal'

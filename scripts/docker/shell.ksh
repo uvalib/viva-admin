@@ -13,4 +13,4 @@ fi
 INSTANCE=viva-admin
 NAMESPACE=uvadave
 
-$DOCKER_TOOL run -ti -p 8600:3000 $NAMESPACE/$INSTANCE /bin/bash -l
+$DOCKER_TOOL run -ti -p 8080:8080 $NAMESPACE/$INSTANCE /bin/bash -l
